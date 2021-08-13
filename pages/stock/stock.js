@@ -6,27 +6,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-    indexList: ["BV", "WDZ", "NH-YJV", "WDZ-YJY", "WDZA-YJY"],
+    indexList: ["A", "B", "C", "D", "E", "F", "G", "H"],
     anchorList: [{
-      anchor: "BV",
+      anchor: "A",
       title: "布电线",
-      text:["BV","BVR","BVV","BVVB","NH-BV","NH-BVR","NH-RV","NH-RVS","NH-RVV","RV"]
-    },{
-      anchor: "WDZ",
+      text: ["BV", "BVR", "BVV", "BVVB", "NH-BV", "NH-BVR", "NH-RV", "NH-RVS", "NH-RVV", "RV"]
+    }, {
+      anchor: "B",
       title: "无卤低烟阻燃电线",
-      text:["WDZ-BYJ","WDZ-BYJR","WDZ-RYJS","WDZA-BYJ","WDZA-BYJR","WDZA-RYJS","WDZA-RYJY","WDZAN-BYJ","WDZAN-BYJR","WDZAN-RYJS"]
-    },{
-      anchor: "NH-YJV",
+      text: ["WDZ-BYJ", "WDZ-BYJR", "WDZ-RYJS", "WDZA-BYJ", "WDZA-BYJR", "WDZA-RYJS", "WDZA-RYJY", "WDZAN-BYJ", "WDZAN-BYJR", "WDZAN-RYJS"]
+    }, {
+      anchor: "C",
       title: "电缆电缆",
-      text:["NH-YJV","NH-YJV22","NH-YJV62","YJV","YJV22","YJV32","YJV62","YJVR","ZA-YJV","ZA-YJV22"]
-    },{
-      anchor: "WDZ-YJY",
+      text: ["NH-YJV", "NH-YJV22", "NH-YJV62", "YJV", "YJV22", "YJV32", "YJV62", "YJVR", "ZA-YJV", "ZA-YJV22"]
+    }, {
+      anchor: "D",
       title: "无卤低烟阻燃低压电线",
-      text:["WDZ-YJY","WDZ-YJY23","WDZA-YJY","WDZA-YJY23","WDZA-YJY63","WDZA-YJYR","WDZAN-YJY","WDZAN-YJY23","WDZAN-YJY63","WDZB-YJY"]
-    },{
-      anchor: "WDZA-YJY",
+      text: ["WDZ-YJY", "WDZ-YJY23", "WDZA-YJY", "WDZA-YJY23", "WDZA-YJY63", "WDZA-YJYR", "WDZAN-YJY", "WDZAN-YJY23", "WDZAN-YJY63", "WDZB-YJY"]
+    }, {
+      anchor: "E",
       title: "中压电力电缆",
-      text:["WDZA-YJY","WDZA-YJY23","WDZA-YJY63","WDZB-YJY","WDZB-YJY23","WDZC-YJY","WDZC-YJY23","YJV","YJV22","YJV32"]
+      text: ["WDZA-YJY", "WDZA-YJY23", "WDZA-YJY63", "WDZB-YJY", "WDZB-YJY23", "WDZC-YJY", "WDZC-YJY23", "YJV", "YJV22", "YJV32"]
     }]
   },
 
