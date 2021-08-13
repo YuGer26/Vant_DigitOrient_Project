@@ -1,0 +1,17 @@
+<!--pages/order/order.wxml-->
+<van-sticky>
+  <van-search value="{{ value }}" shape="round" placeholder="输入型号或规格" bind:focus="onSearch" />
+</van-sticky>
+<!-- <van-divider contentPosition="center" customStyle="padding:0 8px">搜索历史</van-divider> -->
+<van-tabs active="{{ active }}" sticky swipeable animated bind:change="onChange">
+  <van-tab title="全部">
+    <van-empty description="暂无相关报价单" />
+  </van-tab>
+  <van-tab title="待受理">
+    <van-empty description="暂无相关报价单" />
+  </van-tab>
+  <van-tab title="已审核">
+    <van-empty description="暂无相关报价单" />
+  </van-tab>
+</van-tabs>
+<van-toast id="van-toast" />

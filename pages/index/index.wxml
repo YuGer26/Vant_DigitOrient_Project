@@ -1,0 +1,26 @@
+<!--pages/index/index.wxml-->
+<view>
+  <!-- 轮播图 -->
+  <swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+    duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{imgUrls}}" wx:key="id">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<van-notice-bar left-icon="volume" color="#1989fa" background="#ecf9ff" text="因原材料上涨，铜价已调整，请按最新价格执行，即时生效，2021年7月26日。" />
+<view class='bg-white vertical'>
+  <text style="color: #0056d6;text-align: center;font-weight: 500;font-size: 36rpx;padding: 24rpx 0;">关于东方</text>
+  <text class="pay-hint-content">{{contentShow}}</text>
+</view>
+<view
+  style="text-align: center;margin-top: -10rpx;height: 10vh;z-index: 10;">
+  <text class='ellipsis_text' hidden='{{content.length<=maxLength}}' bindtap='ellipsis'>
+    {{ellipsis?"展开阅读全文":"收起"}}
+  </text>
+</view>
+<view style="margin-bottom:200rpx">
+<van-image width="100%" height="150" src="http://lorempixel.com/1280/600/cats" contain />
+</view>

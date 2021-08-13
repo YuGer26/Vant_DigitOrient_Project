@@ -1,0 +1,15 @@
+<!--pages/stock/stock.wxml-->
+<van-search value="{{ value }}" shape="round" placeholder="输入型号或规格" bind:focus="onSearch" />
+<van-index-bar index-list="{{ indexList }}" highlight-color="#f44336">
+  <view wx:for="{{ anchorList }}" wx:key="anchor">
+    <van-index-anchor index="{{ item.anchor }}" use-slot>{{ item.title }}</van-index-anchor>
+    <van-cell center wx:for="{{item.text}}" wx:key="anchor" wx:for-item="items" icon="shop-o" is-link value="查看库存"
+      bind:click="onCheck">
+      <view slot="title">
+        <view class="van-cell-text">{{ items }}</view>
+        <van-tag color="#ffe1e1" text-color="#ad0000">售罄</van-tag>
+      </view>
+    </van-cell>
+  </view>
+</van-index-bar>
+<van-dialog id="van-dialog" />

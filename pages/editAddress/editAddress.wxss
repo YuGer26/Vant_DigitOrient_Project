@@ -1,0 +1,7 @@
+/* pages/editAddress/editAddress.wxss */
+.save-button {
+  display: flex;
+  justify-content: center;
+  width: 94%;
+  margin: 10px;
+}

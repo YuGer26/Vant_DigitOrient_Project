@@ -1,0 +1,27 @@
+<!--pages/address/address.wxml-->
+<view style="height:90vh">
+  <van-cell value="" size="large" use-label-slot wx:for="{{ address }}" wx:key="address">
+    <view slot="icon" class="icon-left">
+      <view>{{ item.iconText }}</view>
+    </view>
+    <view slot="title" style="display: flex;width:60vw">
+      <view class="van-cell-text">{{ item.name }}</view>
+      <view class="van-cell-text van-cell-text-style">{{ item.phone }}</view>
+      <van-tag type="danger" style="margin-left:10rpx;">{{ item.tag }}</van-tag>
+    </view>
+    <view slot="label" style="display:flex">
+      <view class="van-cell-text van-cell-text-style">{{ item.province }}</view>
+      <view class="van-cell-text van-cell-text-style">{{ item.city }}</view>
+      <view class="van-cell-text van-cell-text-style">{{ item.district }}</view>
+      <view class="van-cell-text van-cell-text-style"
+        style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;width: 260rpx;">{{ item.addressContent }}
+      </view>
+    </view>
+    <view slot="right-icon" class="icon-right">
+      <van-icon name="edit" size="46rpx" />
+    </view>
+  </van-cell>
+</view>
+<van-button color="linear-gradient(to right, #299ffd, #0056d6)" round custom-class="address-button"
+  bind:click="onAddressButton">新增地址</van-button>
+<van-toast id="van-toast" />

@@ -1,0 +1,4 @@
+/* pages/commodity/commodity.wxss */
+.van-tree-select{
+  height: 70vh !important;
+}

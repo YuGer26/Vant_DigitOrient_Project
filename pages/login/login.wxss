@@ -1,0 +1,15 @@
+/* pages/login/login.wxss */
+.line-center {
+  display: flex;
+  justify-content: center;
+}
+.name-style{
+  margin: 32rpx 0;
+}
+
+.login-button {
+  display: flex;
+  justify-content: center;
+  width: 94%;
+  margin: 10px;
+}

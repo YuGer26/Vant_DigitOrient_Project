@@ -1,0 +1,37 @@
+/* pages/address/address.wxss */
+.icon-left {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 99px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #299ffd, #0056d6);
+  margin-right: 10rpx;
+  color: #ffffff;
+  font-size: 34rpx
+}
+
+.icon-right {
+  width: 90rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999999;
+  margin-right: -20rpx;
+  border-left: 2rpx solid;
+}
+
+.van-cell-text-style {
+  font-size: 24rpx;
+  color: #949494;
+  margin-right: 6rpx;
+}
+
+.address-button {
+  display: flex;
+  justify-content: center;
+  width: 94%;
+  margin: 10px;
+}

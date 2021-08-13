@@ -1,0 +1,32 @@
+<!--pages/myself/myself.wxml-->
+<view>
+  <view class="line-center" style="margin-top:80rpx;">
+    <van-image width="100" height="100"
+      src="https://iph.href.lu/512x512?text=%E5%8D%A0%E4%BD%8D%E5%9B%BE&fg=666666&bg=cccccc" use-loading-slot
+      use-error-slot round>
+      <van-loading slot="loading" type="circular" color="#f44336" size="30" />
+      <text slot="error"></text>
+    </van-image>
+  </view>
+  <view class="line-center name-style">
+    <van-button color="linear-gradient(to right, #299ffd, #0056d6)" round bind:click="onLogin">
+      <view style="width:140rpx">未登录</view>
+    </van-button>
+  </view>
+</view>
+<van-divider borderColor="#1989fa" style="height:100rpx;" />
+<van-grid clickable column-num="3">
+  <van-grid-item icon="description" link-type="navigateTo" dot text="待受理" bind:click="onWait" />
+  <van-grid-item icon="completed" link-type="navigateTo" badge="2" text="已审核" bind:click="onEnd" />
+  <van-grid-item icon="orders-o" link-type="navigateTo" text="全部报价单" bind:click="onAll" />
+</van-grid>
+<van-divider borderColor="#1989fa" style="height:100rpx;" />
+<van-grid clickable column-num="4">
+  <van-grid-item icon="records" icon-color="#0056d6" link-type="switchTab" url="/pages/stock/stock" text="库存" />
+  <van-grid-item icon="location-o" icon-color="#0056d6" link-type="navigateTo" url="/pages/address/address"
+    text="收获地址" />
+  <van-grid-item icon="setting-o" icon-color="#0056d6" link-type="navigateTo" url="/pages/setting/setting" text="设置" />
+  <van-grid-item icon="share-o" icon-color="#0056d6" text="登出" bind:click="onOut" />
+</van-grid>
+<van-divider borderColor="#1989fa" style="height:100rpx;" />
+<van-toast id="van-toast" />

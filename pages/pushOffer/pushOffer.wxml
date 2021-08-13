@@ -1,0 +1,47 @@
+<!--pages/pushOffer/pushOffer.wxml-->
+<view style="height:90vh">
+  <van-cell clickable bind:click="onAddress">
+    <view slot="icon" style="display:flex;margin-right: 10rpx;">
+      <van-icon name="location-o" size="60rpx" color="#0056d6" />
+    </view>
+    <view slot="title">
+      <view style="display:flex">
+        <view class="van-cell-text">张三</view>
+        <view class="van-cell-text" style="margin-left:10rpx">13800000000</view>
+      </view>
+      <van-tag type="danger">浙江省 宁波市 北仑区 小港街道江南东路968号</van-tag>
+    </view>
+  </van-cell>
+  <van-cell>
+    <view slot="title">
+      <view class="van-cell-text">布电线</view>
+      <view style="display:flex">
+        <view class="van-cell-text" style="color:#a0a0a0">规格</view>
+        <view class="van-cell-text" style="margin-left:10rpx">BV 300/500V 0.5</view>
+      </view>
+      <view style="display:flex">
+        <view class="van-cell-text" style="color:#a0a0a0">颜色</view>
+        <view class="van-cell-text" style="margin-left:10rpx">蓝</view>
+      </view>
+      <view style="display:flex">
+        <view class="van-cell-text" style="color:#a0a0a0">单位</view>
+        <view class="van-cell-text" style="margin-left:10rpx">100米</view>
+      </view>
+    </view>
+    <view slot="right-icon" style="display: flex;flex-direction: column;justify-content: center;">
+      <view class="van-cell-text" style="color:#f44336;font-size:40rpx;">￥54.42</view>
+      <view class="van-cell-text" style="display: flex;justify-content: flex-end;">x1</view>
+    </view>
+  </van-cell>
+  <van-cell-group>
+      <van-field value="{{ text }}" required clearable label="项目名称" icon="question-o" placeholder="请输入项目名称" bind:click-icon="onClickIcon" />
+      <van-field value="{{ text }}" required clearable label="客户收获地址" placeholder="(可选)请输入客户收获地址" />
+      <van-field value="{{ text }}" required clearable label="预交货期" placeholder="(可选)请输入预交货期" />
+      <van-field value="{{ text }}" required clearable label="付款方式" placeholder="(可选)请输入付款方式" />
+      <van-field value="{{ text }}" required clearable label="付款比例" placeholder="(可选)请输入付款比例" />
+  </van-cell-group>
+</view>
+
+<van-submit-bar price="{{ 3050 }}" button-text="提交需求" bind:submit="onClickButton" tip="{{ true }}">
+  <view slot="tip">您的收货地址不支持同城送货, 点击<text style="color:blue;margin-left:4rpx">修改地址</text></view>
+</van-submit-bar>

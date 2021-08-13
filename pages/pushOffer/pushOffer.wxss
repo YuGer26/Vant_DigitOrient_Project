@@ -1,0 +1,8 @@
+/* pages/pushOffer/pushOffer.wxss */
+.van-button--danger{
+  background: linear-gradient(to right, #299ffd, #0056d6) !important;
+  border: var(--button-border-width,1px) solid var(--button-danger-border-color,#299ffd) !important;
+}
+/* .van-cell--required:before{
+  color: var(--cell-required-color,#0056d6) !important;
+} */

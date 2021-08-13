@@ -1,0 +1,50 @@
+<!--pages/offer/offer.wxml-->
+<view style="height:80vh">
+  <van-checkbox-group wx:for="{{offerArray}}" wx:key="offer" value="{{ result }}" bind:change="onCheckbox">
+    <van-swipe-cell right-width="{{ 80 }}" name="{{ item.id }}" async-close bind:close="onClose">
+      <van-card price="{{ item.price }}" origin-price="{{ item.origin_price }}" title="{{ item.title }}">
+        <view slot="thumb" custom-class="van-card__thumb" style="padding-left:24rpx;">
+          <van-image width="60" height="60" src="{{ item.imageURL }}" style="display: flex;justify-content: center;margin-top: 24rpx;margin-right: -24rpx;}" use-loading-slot use-error-slot>
+            <van-loading slot="loading" type="circular" color="#0056d6" size="30" />
+            <text slot="error"></text>
+          </van-image>
+        </view>
+        <view slot="footer" style="position: absolute;top: 39%;left:4%;">
+          <!-- <van-checkbox value="{{ item.checked }}" shape="square" icon-size="25px" use-icon-slot bind:change="onCheckbox">
+          <image slot="icon" src="{{ item.checked ? activeIcon : inactiveIcon }}" style="width:25px;height: 25px;" />
+        </van-checkbox> -->
+          <van-checkbox name="{{ item.id }}" checked-color="#0056d6" icon-size="20px">
+          </van-checkbox>
+        </view>
+        <view slot="desc">规格: {{ item.desc }}</view>
+        <view slot="tags">
+          <van-tag type="warning" style="margin-right: 4px;">{{ item.unit }}</van-tag>
+          <van-tag type="primary">{{ item.colorTag }}</van-tag>
+        </view>
+        <view slot="num" style="float:right">
+          <van-stepper value="{{ item.num }}" integer bind:change="onChange" />
+        </view>
+
+      </van-card>
+      <view slot="right">
+        <van-icon name="delete" color="#ffffff" size="40px"
+          custom-style="height: 100%;display: flex;justify-content: center;" />
+      </view>
+    </van-swipe-cell>
+  </van-checkbox-group>
+</view>
+<view style="height:10vh">
+  <van-cell>
+    <view slot="title" style="display: flex;justify-content: flex-start;align-items: center;">
+      <van-checkbox value="{{ checkeds }}" checked-color="#0056d6" bind:change="onCheckboxTwo">全选</van-checkbox>
+      <van-button round color="{{ delButtonColor }}" custom-class="van-button-get">删除</van-button>
+    </view>
+    <view slot="right-icon" style="display: flex;justify-content: center;align-items: center;">
+      <view class="van-cell-text">￥20.0</view>
+      <van-button round color="linear-gradient(to right, #299ffd, #0056d6)" custom-class="van-button-get" bind:click="pushOffer">生成报价
+      </van-button>
+    </view>
+  </van-cell>
+</view>
+<van-toast id="van-toast" />
+<van-dialog id="van-dialog" />

@@ -1,0 +1,6 @@
+<!--pages/search/search.wxml-->
+<van-sticky>
+  <van-search value="{{ value }}" shape="round" show-action placeholder="输入型号或规格" bind:focus="onSearch" bind:cancel="onCancel"/>
+</van-sticky>
+<van-divider contentPosition="center" customStyle="padding:0 8px">搜索历史</van-divider>
+<van-empty description="暂无记录" />

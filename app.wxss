@@ -1,0 +1,32 @@
+/**app.wxss**/
+@import '/miniprogram_npm/@vant/weapp/common/index.wxss';
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.van-info {
+  background: #0056d6 !important;
+}
+.van-sidebar-item--selected {
+  border-color: #0056d6 !important;
+}
+
+.van-tree-select__item--active {
+  color: #0056d6 !important;
+}
+
+.van-button--danger{
+  background: linear-gradient(to right, #299ffd, #0056d6) !important;
+  border: var(--button-border-width,1px) solid var(--button-danger-border-color,#299ffd) !important;
+}
+
+.van-tabs__line{
+  background-color: #0056d6 !important;
+  background-color: var(--tabs-bottom-bar-color,#0056d6) !important;
+}

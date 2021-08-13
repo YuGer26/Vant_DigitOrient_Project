@@ -1,0 +1,14 @@
+/* pages/myself/myself.wxss */
+.line-center {
+  display: flex;
+  justify-content: center;
+}
+.name-style{
+  margin: 32rpx 0;
+}
+.van-divider {
+  border-color: #eeeeee !important;
+  border-width: 4rpx !important;
+  margin: 0 0 !important;
+  margin: var(--divider-margin, 0 0) !important;
+}
