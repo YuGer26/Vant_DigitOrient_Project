@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/itemCommodity/itemCommodity",
     "pages/commodity/commodity",
-    "pages/index/index",
     "pages/setting/setting",
     "pages/myself/myself",
     "pages/pushOffer/pushOffer",
