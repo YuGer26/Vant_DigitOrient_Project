@@ -1,0 +1,24 @@
+/* pages/itemCommodity/itemCommodity.wxss */
+.save-button {
+  display: flex;
+  justify-content: center;
+  width: 94%;
+  margin: 10px;
+  margin-bottom: -180rpx;
+}
+
+.shoppingTags {
+  background: #f3f3f3;
+  border: 1rpx solid transparent;
+  padding: 8rpx 8rpx;
+  border-radius: 6rpx;
+  font-size: 28rpx;
+  margin-right: 8rpx;
+  color: #000000;
+}
+
+.active {
+  background: #f4433647;
+  border: 1rpx solid #F44336;
+  color: #F44336;
+}

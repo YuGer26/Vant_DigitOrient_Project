@@ -1,0 +1,62 @@
+<!--pages/itemCommodity/itemCommodity.wxml-->
+<van-sticky>
+  <van-search value="{{ value }}" shape="round" placeholder="输入型号或规格" bind:focus="onSearch" />
+</van-sticky>
+<van-cell-group>
+  <van-cell use-label-slot>
+    <view slot="title" style="color:#a2a2a2;">
+      <view class="van-cell-text">布电线</view>
+    </view>
+    <view slot="label" style="color:#000000;">
+      <view class="van-cell-text">BV 300/500V 0.5</view>
+      <view class="van-cell-text">单位：元/100米</view>
+    </view>
+    <view>
+      <view class="van-cell-text" style="color:#000000">￥65.60</view>
+      <view>
+        <van-button icon="description" color="#ffffff" custom-style="color:#000000;" round bind:click="onStockList" />
+        <van-button icon="shopping-cart-o" color="#ffffff" custom-style="color:#f44336" round bind:click="onShopping" />
+      </view>
+    </view>
+  </van-cell>
+</van-cell-group>
+<van-popup show="{{ show }}" position="bottom" closeable custom-style="height: 40%" bind:close="onClose">
+  <view>
+    <view style="height:26vh">
+      <van-cell use-label-slot>
+        <view slot="label" style="color:#000000;">
+          <view class="van-cell-text" style="display:flex;font-size:28rpx">
+            <view style="margin-right:12rpx;color:#a2a2a2;">大类</view>布电线
+          </view>
+          <view class="van-cell-text" style="display:flex;font-size:28rpx;margin-top:10rpx">
+            <view style="margin-right:12rpx;color:#a2a2a2;">型号</view>BV
+          </view>
+          <view class="van-cell-text" style="display:flex;font-size:28rpx;margin-top:10rpx">
+            <view style="margin-right:12rpx;color:#a2a2a2;">规格</view>0.5
+          </view>
+          <view class="van-cell-text" style="display:flex;font-size:28rpx;margin-top:10rpx">
+            <view style="margin-right:12rpx;color:#a2a2a2;">电压等级</view>300/500V
+          </view>
+          <view class="van-cell-text" style="display:flex;font-size:28rpx;margin-top:10rpx">
+            <view style="margin-right:12rpx;color:#a2a2a2;">单价</view>
+            <view style="margin-right:12rpx;color:#f44336;">￥56.60</view>元/100米
+          </view>
+        </view>
+      </van-cell>
+      <van-cell use-label-slot>
+        <view slot="label" style="display:flex;">
+          <view class="shoppingTags {{tagColors_item === index ? 'active' : ''}}" wx:for="{{tagsColor}}"
+            wx:key="tagColor" data-index='{{index}}' catchtap="onShoppingTags">{{item}}
+          </view>
+        </view>
+      </van-cell>
+      <van-cell title="数量">
+        <view slot="right-icon">
+          <van-stepper value="{{ 1 }}" bind:change="onShopingNum" />
+        </view>
+      </van-cell>
+    </view>
+    <van-button color="linear-gradient(to right, #F44336, #E91E63)" round custom-class="save-button"
+      bind:click="onLoginButton">确定</van-button>
+  </view>
+</van-popup>

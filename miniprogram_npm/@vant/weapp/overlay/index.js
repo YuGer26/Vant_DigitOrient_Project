@@ -13,10 +13,6 @@ component_1.VantComponent({
       type: Number,
       value: 1,
     },
-    lockScroll: {
-      type: Boolean,
-      value: true,
-    },
   },
   methods: {
     onClick: function () {

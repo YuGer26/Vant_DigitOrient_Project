@@ -299,6 +299,12 @@ Page({
     this.setData({
       activeId
     });
+
+    setTimeout(() => {
+      wx.navigateTo({
+        url: '/pages/itemCommodity/itemCommodity',
+      })
+    }, 1000);
   },
 
   /**

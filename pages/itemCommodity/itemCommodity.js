@@ -1,47 +1,43 @@
-// pages/address/address.js
+// pages/itemCommodity/itemCommodity.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    address:[{
-      iconText:"张",
-      name:"张三",
-      phone:13800000000,
-      tag:"默认",
-      province:"浙江省",
-      city:"宁波市",
-      district:"北仑区",
-      addressContent:"小港街道江南东路968号"
-    },{
-      iconText:"李",
-      name:"李四",
-      phone:17700000000,
-      tag:"",
-      province:"江苏省",
-      city:"南京市",
-      district:"玄武区",
-      addressContent:"龙蟠路173号"
-    }]
+    show: false,
+    tagColors_item: 0,
+    tagsColor:['红色','蓝色','黑色']
   },
-
-  onClickLeft() {
-    wx.switchTab({
-      url: '/pages/myself/myself',
+  
+  onShoppingTags(e){
+    var that= this;
+    console.log(e)
+    let Index=e.currentTarget.dataset.index;//获取index值
+    console.log(Index);
+    that.setData({
+      tagColors_item: Index
     })
   },
 
-  onEdit(){
+  onClose(){
+    this.setData({ show: false });
+  },
+
+  onShopingNum(event){
+    console.log(event.detail);
+  },
+
+  onStockList(){
     wx.navigateTo({
-      url: '/pages/editAddress/editAddress',
+      url: '/pages/stockList/stockList',
     })
   },
 
-  onAddressButton(){
-    wx.navigateTo({
-      url: '/pages/editAddress/editAddress',
-    })
+  onShopping(){
+      this.setData({
+        show: true
+      });
   },
 
   /**

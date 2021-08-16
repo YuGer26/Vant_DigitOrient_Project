@@ -26,7 +26,7 @@
   bind:click="onLoginButton">保存地址</van-button>
 <van-toast id="van-toast" />
 <van-dialog id="van-dialog" />
-<van-popup show="{{ show }}" round position="bottom" custom-style="height: 40%">
+<van-popup show="{{ show }}" position="bottom" custom-style="height: 40%">
   <van-area area-list="{{ areaList }}" title="选择地区" bind:confirm="getArea" bind:cancel="colseArea"
     bind:change="changeArea" />
 </van-popup>
